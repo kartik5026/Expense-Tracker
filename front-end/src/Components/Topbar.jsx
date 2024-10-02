@@ -31,7 +31,7 @@ function TopBar() {
 
             <div className="flex justify-between  bg-blue-950 text-white py-4 flex-wrap">
                 <div className="mx-4">
-                    <a href="/"><h1 className="text-sm md:text-4xl">Money Tracker</h1></a>
+                    <a href="/"><h1 className="text-lg md:text-4xl">Money Tracker</h1></a>
                 </div>
                 
                     <div className={access?'hidden':'block'}>
