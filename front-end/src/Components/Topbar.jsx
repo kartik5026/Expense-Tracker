@@ -14,7 +14,7 @@ function TopBar() {
     
 
      async function getDataFromBackEnd(){
-        const moneyDetails = await axios.get('https://cashappbackend.onrender.com/', {withCredentials:true});
+        const moneyDetails = await axios.get('https://expense-tracker-app-cpuk.onrender.com/', {withCredentials:true});
         const res = moneyDetails.data;
         console.log(res);
         if(res.msg==='granted'){
