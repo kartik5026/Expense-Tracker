@@ -36,7 +36,7 @@ app.get("/", async (req, res) => {
         try {
 
             console.log("Token Found")
-            const decode = jwt.verify(token, {key});
+            const decode = jwt.verify(token, key);
             console.log(decode);
             const data = await CashModel.find();
             res.send({data,msg:'granted'});
@@ -88,7 +88,7 @@ app.post("/login", async (req, res) => {
             //create token
             //give it to the client
             //verify and authorze resources
-            const token = jwt.sign({ username }, {key} , { expiresIn: '1h' });
+            const token = jwt.sign({ username }, key , { expiresIn: '1h' });
           res.cookie('mytoken', token, { maxAge: 24*60*60*1000 , secure:true, sameSite:'None'});
             res.send("Logged In");
 
