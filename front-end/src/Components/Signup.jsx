@@ -1,7 +1,7 @@
 function Signup() {
     return (
         <>
-            <form action="https://expense-tracker-app-cpuk.onrender.com//signup" method="post">
+            <form action="https://expense-tracker-app-cpuk.onrender.com/signup" method="post">
                 <div className="justify-center text-black flex flex-wrap p-10">
                     <div className="">
                         <input className="border border-black  min-w-[300px]" type="text" placeholder="Enter Your Name" name="username"></input>
