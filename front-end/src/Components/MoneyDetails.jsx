@@ -93,7 +93,7 @@ function MoneyDetails() {
 
     async function handleClick(userRemark){
         alert(userRemark+" deleted");
-        const obj = await axios.delete('http://localhost:3000/delete',{data:{userRemark}},{withCredentials:true});
+        const obj = await axios.delete('https://expense-tracker-app-cpuk.onrender.com/delete',{data:{userRemark}},{withCredentials:true});
         
     }
    
