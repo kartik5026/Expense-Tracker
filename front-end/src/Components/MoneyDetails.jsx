@@ -36,7 +36,7 @@ function MoneyDetails() {
     
     async function getDataFromBackEnd() {
      
-        const obj = await axios.get("https://cashappbackend.onrender.com/", {withCredentials:true});
+        const obj = await axios.get("https://expense-tracker-app-cpuk.onrender.com/", {withCredentials:true});
         
         const res = obj.data;
         // console.log(res);
