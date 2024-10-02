@@ -7,7 +7,7 @@ function Main(){
 
     async function handleChange(e){
         const val  = e.target.value;
-        const uri = "https://cashappbackend.onrender.com/search/"+""+val;
+        const uri = "https://expense-tracker-app-cpuk.onrender.com//search/"+""+val;
         const res = await axios.get(uri);
         const data = res.data;
         console.log(data);
