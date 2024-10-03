@@ -7,7 +7,7 @@ function TopBar() {
     const [access,setAccess] = useState();
     useEffect(()=>{
         getDataFromBackEnd();
-    },[])
+    },[access])
 
 
     
