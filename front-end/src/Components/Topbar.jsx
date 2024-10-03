@@ -6,6 +6,7 @@ import axios from 'axios';
 function TopBar() {
     const [access,setAccess] = useState();
     useEffect(()=>{
+        console.log('TopBar Mounted');
         getDataFromBackEnd();
         return () => {
       // Code to run when the component is unmounted
