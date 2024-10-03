@@ -2,7 +2,7 @@ function Signup() {
     return (
         <>
             <form action="https://expense-tracker-app-cpuk.onrender.com/signup" method="post">
-                <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-10">
+                <div className="flex  text-black flex-col items-center justify-center min-h-screen bg-gray-100 p-10">
                     <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
                         <h2 className="text-2xl font-semibold text-gray-800 text-center mb-6">Create Your Account</h2>
                         <div className="mb-4">
@@ -16,7 +16,7 @@ function Signup() {
                         <div className="mb-4">
                             <input
                                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow duration-300"
-                                type="password"
+                                type="text"
                                 placeholder="Enter Your Password"
                                 name="password"
                             />
