@@ -7,6 +7,10 @@ function TopBar() {
     const [access,setAccess] = useState();
     useEffect(()=>{
         getDataFromBackEnd();
+        return () => {
+      // Code to run when the component is unmounted
+      console.log("TopBar unmounted");
+    };
     },[])
 
 
