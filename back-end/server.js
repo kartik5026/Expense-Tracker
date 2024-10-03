@@ -19,7 +19,7 @@ mongoose.connect(uri).then(() => {
 })
 
 app.use(cors({
-    origin:'https://expense-tracker-app-ten-ruddy.vercel.app',
+     origin:['http://localhost:5173', 'https://expense-tracker-app-ten-ruddy.vercel.app'],
     credentials:true
 }));
 app.use(express.json());
