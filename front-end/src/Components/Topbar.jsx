@@ -22,7 +22,7 @@ function TopBar() {
         console.log(res);
         if(res.msg==='granted'){
             setAccess(true);
-            setName(moneyDetails.userName);
+            setName(res.userName);
         }
         else{
             setAccess(false);
@@ -43,6 +43,10 @@ function TopBar() {
                         <Link to="/login"><button className="bg-blue-800  rounded-lg text-white py-2 px-4 mx-4 text-sm md:text-lg">Login</button></Link>
                         
                     </div>
+                 <div className={access ? 'block' : 'hidden'}>
+                     <marquee className="text-center md:text-xl p-2">Welcome! {name}</marquee>
+
+                </div>
                     <div className={access?'block':'hidden'}>
                     <p>Welcome{name}</p>
                     <Logout/>
