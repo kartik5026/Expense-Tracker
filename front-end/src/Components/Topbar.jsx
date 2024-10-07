@@ -16,7 +16,7 @@ function TopBar() {
     
 
      async function getDataFromBackEnd(){
-        const moneyDetails = await axios.get('http://localhost:3000/', {withCredentials:true});
+        const moneyDetails = await axios.get('https://expense-tracker-lk4n.onrender.com/', {withCredentials:true});
         const res = moneyDetails.data;
         console.log(res);
         if(res.msg==='granted'){

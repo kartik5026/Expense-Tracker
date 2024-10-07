@@ -36,7 +36,7 @@ function MoneyDetails() {
     
     async function getDataFromBackEnd() {
      
-        const obj = await axios.get("http://localhost:3000/", {withCredentials:true});
+        const obj = await axios.get("https://expense-tracker-lk4n.onrender.com/", {withCredentials:true});
         
         const res = obj.data;
         // console.log(res);
@@ -93,7 +93,7 @@ function MoneyDetails() {
 
     async function handleClick(userRemark){
         alert(userRemark+" deleted");
-        const obj = await axios.delete('http://localhost:3000/delete',{data:{userRemark}, withCredentials:true});
+        const obj = await axios.delete('https://expense-tracker-lk4n.onrender.com/delete',{data:{userRemark}, withCredentials:true});
         
     }
    

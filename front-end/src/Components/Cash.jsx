@@ -2,7 +2,7 @@ function CashIn() {
     return (
         <div className="text-white bg-gray-800 p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">Cash Form</h2>
-            <form className="space-y-6" action="http://localhost:3000/cash" method="post">
+            <form className="space-y-6" action="https://expense-tracker-lk4n.onrender.com/cash" method="post">
                 <div className="flex flex-wrap -mx-4">
                     <div className="w-full md:w-1/2 px-4 mb-4">
                         <label htmlFor="date" className="block text-lg mb-2">Date</label>
