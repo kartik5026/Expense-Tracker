@@ -42,7 +42,7 @@ app.get("/", async (req, res) => {
             const userName = decode.username;
             const user = await userModel.findOne({ _id: userId });
             const data = user.userResources;
-            res.send({ data, msg: 'granted' });
+            res.send({ userName,data, msg: 'granted' });
         } catch (error) {
             res.send('Invalid Token');
         }
