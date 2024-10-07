@@ -16,7 +16,7 @@ function TopBar() {
     
 
      async function getDataFromBackEnd(){
-        const moneyDetails = await axios.get('https://expense-tracker-app-cpuk.onrender.com/', {withCredentials:true});
+        const moneyDetails = await axios.get('http://localhost:3000/', {withCredentials:true});
         const res = moneyDetails.data;
         console.log(res);
         if(res.msg==='granted'){
@@ -37,7 +37,7 @@ function TopBar() {
                 </div>
                 
                     <div className={access?'hidden':'block'}>
-                        <Link to="/signup"><button className="bg-blue-800 rounded-lg text-white py-2 px-4 mx-4 text-sm md:text-lg">Sing UP</button></Link>
+                        <Link to="/signup"><button className="bg-blue-800 rounded-lg text-white py-2 px-4 mx-4 text-sm md:text-lg">Sign up</button></Link>
                         <Link to="/login"><button className="bg-blue-800  rounded-lg text-white py-2 px-4 mx-4 text-sm md:text-lg">Login</button></Link>
                         
                     </div>

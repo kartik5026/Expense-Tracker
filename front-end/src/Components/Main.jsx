@@ -7,8 +7,8 @@ function Main(){
 
     async function handleChange(e){
         const val  = e.target.value;
-        const uri = "https://expense-tracker-app-cpuk.onrender.com/search/"+""+val;
-        const res = await axios.get(uri);
+        const uri = "http://localhost:3000/search/"+""+val;
+        const res = await axios.get(uri,{withCredentials:true});
         const data = res.data;
         console.log(data);
         if(data.msg==='Not Found'){

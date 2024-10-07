@@ -36,7 +36,7 @@ function MoneyDetails() {
     
     async function getDataFromBackEnd() {
      
-        const obj = await axios.get("https://expense-tracker-app-cpuk.onrender.com/", {withCredentials:true});
+        const obj = await axios.get("http://localhost:3000/", {withCredentials:true});
         
         const res = obj.data;
         // console.log(res);
@@ -93,7 +93,7 @@ function MoneyDetails() {
 
     async function handleClick(userRemark){
         alert(userRemark+" deleted");
-        const obj = await axios.delete('https://expense-tracker-app-cpuk.onrender.com/delete',{data:{userRemark}},{withCredentials:true});
+        const obj = await axios.delete('http://localhost:3000/delete',{data:{userRemark}, withCredentials:true});
         
     }
    
@@ -104,9 +104,9 @@ function MoneyDetails() {
                 <Main/>
 
                 <div className="flex flex-wrap mt-5 justify-evenly text-center">
-                    <p className="border min-w-[400px] border-gray-300 md:px-24 py-10 my-5 md:my-0 font-bold bg-white text-black rounded-xl">Cash In:{cashIn}</p>
-                    <p className="border min-w-[400px] border-gray-300 md:px-24 py-10 my-5 md:my-0 font-bold bg-white text-black rounded-xl">Cash Out:{cashOut}</p>
-                    <p className="border min-w-[400px] border-gray-300 md:px-24 py-10 my-5 md:my-0 font-bold bg-white text-black rounded-xl">Net Balance:{totalCash}</p>
+                    <p className="border min-w-[400px] border-gray-300 md:px-24 py-10 my-5 md:my-0 font-bold bg-white text-black rounded-xl ">Cash In:{cashIn}</p>
+                    <p className="border min-w-[400px] border-gray-300 md:px-24 py-10 my-5 md:my-0 font-bold bg-white text-black rounded-xl ">Cash Out:{cashOut}</p>
+                    <p className="border min-w-[400px] border-gray-300 md:px-24 py-10 my-5 md:my-0 font-bold bg-white text-black rounded-xl ">Net Balance:{totalCash}</p>
                 </div>
 
 
@@ -114,7 +114,7 @@ function MoneyDetails() {
                 <div className="mt-4 flex justify-center">
                     <table className='text-center ' border="2">
                         <tbody>
-                            <tr className='border border-x-2'>
+                            <tr className='border border-x-2 text-purple-300'>
 
                                 <th className=" md:px-20 md:text-2xl text-xs">Date</th>
                                 <th className=" md:px-20 md:text-2xl text-xs">Remarks</th>
@@ -124,7 +124,7 @@ function MoneyDetails() {
 
                             </tr>
                             {
-                                dataArray.length == 0 ? <tr ><td>User Not Found Go To <a href='/' className='text-red-400' >/Home</a> </td></tr> : dataArray.map((data, id) => (
+                                dataArray.length == 0 ? <tr ><td>Add the Details Go To <a href='/' className='text-red-400' >/Home</a> </td></tr> : dataArray.map((data, id) => (
 
 
 
