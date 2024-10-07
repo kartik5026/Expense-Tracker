@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 function TopBar() {
     const [access,setAccess] = useState();
+    const [name,setName] = useState('');
     useEffect(()=>{
         
         getDataFromBackEnd();
@@ -21,6 +22,7 @@ function TopBar() {
         console.log(res);
         if(res.msg==='granted'){
             setAccess(true);
+            setName(moneyDetails.userName);
         }
         else{
             setAccess(false);
@@ -42,6 +44,7 @@ function TopBar() {
                         
                     </div>
                     <div className={access?'block':'hidden'}>
+                    <p>Welcome{name}</p>
                     <Logout/>
                     </div>
             </div>
