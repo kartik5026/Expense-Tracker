@@ -48,7 +48,7 @@ function TopBar() {
 
                 </div>
                     <div className={access?'block':'hidden'}>
-                    <p>Welcome{name}</p>
+                    
                     <Logout/>
                     </div>
             </div>
